@@ -1,0 +1,51 @@
+{{!-- BANNER NO TOPO --}}
+<div class="banner-topo">
+    <img src="/public/pictures/Vendas de Ursos de Pelúcia e Revendas! (10).png"
+         alt="Banner"
+         class="banner-img">
+</div>
+
+<main>
+
+    {{!-- Formulário --}}
+    <div class="form-background">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                     <p class="p">INFORME SOBRE SUA PELÚCIA</p>
+                <form action="/cadastrar" method="POST" enctype="multipart/form-data">
+               
+                    <input type="text" name="nome" class="form-control mb-2" placeholder="Nome do Ursinho">
+                    <input type="number" name="valor" class="form-control mb-2" placeholder="Valor Ursinho">
+                    <input type="file" name="imagem" class="form-control mb-2">
+                    <input type="submit" class="btn  w-100" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+   
+ <div class="Listados">
+    <div class="container" >
+        <div class="row" >
+            <p>Veja Todos os produtos listados aqui</p>
+            {{#each produtos}}
+                <div class="card-col">
+                    <div class="card">
+                        <img src="/imagens/{{imagem}}" class="card-img-top" alt="{{nome}}">
+                        <div class="textos">
+                            <p>{{nome}}</p>
+                            <p>R${{valor}}</p>
+                        </div>
+                        <a href="/homeEditar/{{codigo}}" class="btn">Alterar</a>
+                        <a href="/remover/{{codigo}}/{{imagem}}" class="btn-remove btn-danger">Remover</a>
+                    </div>
+                </div>
+            {{/each}}
+
+        </div>
+    </div>
+ </div>
+
+</main>

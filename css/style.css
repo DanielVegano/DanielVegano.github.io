@@ -1,0 +1,130 @@
+
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body {
+    background: linear-gradient(
+    rgb(208, 254, 198)
+);
+
+
+}
+
+     .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
+}
+.col-6 {
+    background-color: rgb(255, 255, 255);
+    max-width: 600px;     
+    width: 50%;            
+    margin: 80px auto;
+    border-radius: 15px;
+}
+.card-col {
+    width: 20%;       
+    min-width: 180px; 
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+form {
+    margin-top: 80px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    height: 400px;
+}
+
+form input {
+    margin-bottom: 10px;
+}
+.p{
+    margin-top: 20px;
+    border-radius: 15px;
+    height: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #7fcf6f;
+}
+
+form input[type="submit"] {
+    margin-top: 10px;
+}
+
+.form-background {
+    background-image: url('/public/pictures/Vendas\ de\ Ursos\ de\ Pelúcia\ e\ Revendas!\ \(6\).png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    height: 950px;
+}
+
+/* CARDS */
+.card {
+    margin-top: 40px;
+    padding: 5px;
+}
+
+.textos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.card a {
+    margin-top: 5px;
+}
+
+.banner-topo {
+    width: 100%;
+    height: 990px;      
+    overflow: hidden;
+    background-color: #7fcf6f;
+    image-rendering: auto;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    display: block;
+    filter: contrast(105%) saturate(105%) sharpen(5px);
+}
+
+
+.Listados {
+    background-image: url('/public/pictures/Vendas\ de\ Ursos\ de\ Pelúcia\ e\ Revendas!\ \(9\).png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    height: 1000px;
+    margin-bottom: 0;
+    background-color: rgb(216, 255, 208);
+    text-align: center;
+}
+
+.btn {
+    height: 40px;
+    background-color: #2dac13;
+    color: white;
+    text-align: center;
+}
+
+.btn-remove {
+    height: 40px;
+    background-color: #f92f10;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+} 
