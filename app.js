@@ -61,9 +61,7 @@ conexao.connect(function (erro) {
 });
 
 
-// =========================
-// 🔥 ROTA LOGIN (PÁGINA)
-// =========================
+
 app.get('/login', function(req, res){
     // Atualmente o projeto usa um `views/index.html` estático como página de login.
     // Envia o arquivo HTML diretamente para evitar dependência de `login.handlebars` ausente.
@@ -76,9 +74,7 @@ app.get('/', function(req, res){
 });
 
 
-// =========================
-// 🔥 ROTA QUE VALIDA LOGIN
-// =========================
+
 app.post('/login', function(req, res) {
     let email = req.body.email;
     let senha = req.body.senha;
@@ -110,9 +106,7 @@ app.post('/login', function(req, res) {
 });
 
 
-// =========================
-// 🔥 ROTA HOME (APÓS LOGIN)
-// =========================
+
 app.get('/home', function(req, res){
     // pega produtos do banco
     let sql = 'SELECT * FROM produtos';
@@ -125,9 +119,7 @@ app.get('/home', function(req, res){
 });
 
 
-// =========================
-// 🔥 CADASTRAR PRODUTO
-// =========================
+
 app.post('/cadastrar', function(req, res) {
     let nome = req.body.nome;
     let valor = req.body.valor;
@@ -155,9 +147,7 @@ app.post('/cadastrar', function(req, res) {
 });
 
 
-// =========================
-// 🔥 REMOVER PRODUTO
-// =========================
+
 app.get('/remover/:codigo/:imagem', function (req, res) {
     let codigo = req.params.codigo;
     let imagem = req.params.imagem;
@@ -176,9 +166,7 @@ app.get('/remover/:codigo/:imagem', function (req, res) {
 });
 
 
-// =========================
-// 🔥 EDITAR PRODUTO
-// =========================
+
 app.get('/homeEditar/:codigo', function (req, res) {
     let codigo = req.params.codigo;
     let sql = 'SELECT * FROM produtos WHERE codigo = ? LIMIT 1';
